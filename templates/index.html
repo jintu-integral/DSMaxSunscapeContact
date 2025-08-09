@@ -10,16 +10,16 @@
     </style>
 </head>
 <body>
-    <h2>Resident Contact Details</h2>
+    <h2>DS Max Suscape Residents Contact Details</h2>
 
     <div class="mb-3">
-        <button class="btn btn-secondary filter-btn" onclick="filterTable('All')">All</button>
+        <button class="btn btn-Primary filter-btn" onclick="filterTable('All')">All</button>
         <button class="btn btn-success filter-btn" onclick="filterTable('Owner')">Owners</button>
         <button class="btn btn-info filter-btn" onclick="filterTable('Tenant')">Tenants</button>
         <button class="btn btn-warning filter-btn" onclick="filterTable('Common')">Common Services</button>
     </div>
-
-    <table class="table table-bordered" id="residentTable">
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover" id="residentTable">
         <thead>
             <tr>
                 <th>Name</th>
@@ -43,6 +43,7 @@
             {% endfor %}
         </tbody>
     </table>
+    </div>
 
 <script>
     function filterTable(type) {
